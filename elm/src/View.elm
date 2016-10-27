@@ -67,8 +67,14 @@ createItem model idx friend =
         , text friend.name
         , Lists.subtitle [] [ text friend.nickname ]
         ]
+      -- TODO: pop up a 'Remove Friend' button when a checkbox is selected?
+      -- Aside from the HTML we'd have to add somewhere, we'd also need a 'RemoveFriends'
+      -- message in the model for the button to generate
     , Lists.content2
         []
+        -- elm-mdl has us specify a unique identifier for stateful things like toggle buttons,
+        -- hence the use of indexedMap above so we have an idx to use here
+        -- (it's also obviously useful for us as well)
         [ Toggles.checkbox Mdl [idx] model.mdl
             [ Toggles.value (Set.member idx model.removes)
             , Toggles.onClick (Model.ToggleRemoveFriend idx)
