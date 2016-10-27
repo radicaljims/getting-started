@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started in Elm
 
 - Read this page and install Elm for your platform: https://guide.elm-lang.org/get_started.html
 - Don't forget to setup your editor of choice!
