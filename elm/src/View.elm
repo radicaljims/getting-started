@@ -30,7 +30,7 @@ view model =
       , main = [body model]
       }
 
-    -- This here is boilerplate to load in the Material JS resources ans setup the color scheme
+    -- This here is boilerplate to load in the Material JS resources and setup the color scheme
     -- Go here to read about what '|>' means (it's a kind of function application):
     -- http://elm-lang.org/docs/syntax
     |> Material.Scheme.topWithScheme Color.BlueGrey Color.Indigo
